@@ -76,13 +76,13 @@ const GlobalStyles = createGlobalStyle`
       margin-top: 15px;
     }
   }
+}
 
-  /* https://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone */
-  /* lortschi answer */
-  @supports (-webkit-overflow-scrolling: touch) {
-    input, textarea {
-      font-size: 16px;
-    }
+/* https://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone */
+/* lortschi answer */
+@supports (-webkit-overflow-scrolling: touch) {
+  input, textarea {
+    font-size: 16px;
   }
 }
 `
