@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-next-seo`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
