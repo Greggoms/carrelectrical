@@ -14,11 +14,11 @@ export const wrapRootElement = ({ element, props }) => {
       <Helmet>
         <link
           rel="stylesheet"
-          href="//fonts.googleapis.com/css?family=Raleway"
+          href="https://fonts.googleapis.com/css?family=Raleway:200,400,700&display=swap"
         />
       </Helmet>
       <Layout {...props}>{element}</Layout>
-      <ToastContainer newestOnTop={true} containerId="notifyToast" />
+      <ToastContainer newestOnTop={true} />
     </ThemeProvider>
   )
 }
@@ -35,9 +35,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Raleway", sans-serif;
 
     min-height: 100vh;
-    background: linear-gradient(to right bottom, #F25C05, 
-      #F2B705,
-      #049DBF 100%);
+    background: ${props => props.theme.grayscale.dark3}
   }
 
    #gatsby-focus-wrapper {
@@ -45,12 +43,13 @@ const GlobalStyles = createGlobalStyle`
   }
 
 .Toastify__toast-container {
-  /* width: max-content !important; */
+  width: 100% !important;
   max-width: 700px;
   
   .Toastify__toast {
     background: ${theme.colors.colorDark};
-    color: ${theme.colors.text};
+    color: ${theme.grayscale.light1};
+    overflow-y: scroll;
   }
   
   .Toastify__toast-icon {
@@ -59,11 +58,23 @@ const GlobalStyles = createGlobalStyle`
   }
   
   .Toastify__close-button {
-      color: ${theme.colors.text};
+      color: ${theme.grayscale.light1};
       svg {
         width: 30px;
         height: 30px;
       }
+  }
+
+  .fake-email {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    span {
+      text-align: center;
+      font-size: 10pt;
+      margin-top: 15px;
+    }
   }
 
   /* https://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone */

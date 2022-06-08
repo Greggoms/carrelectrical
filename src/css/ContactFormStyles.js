@@ -11,6 +11,12 @@ export const ContactFormContainer = styled.form`
     gap: 2px;
   }
 
+  input,
+  textarea {
+    width: 100%;
+    padding: 5px 2px;
+  }
+
   textarea {
     min-height: 125px;
   }
@@ -24,5 +30,6 @@ export const ContactFormContainer = styled.form`
     padding: 10px;
 
     font-size: large;
+    cursor: pointer;
   }
 `
