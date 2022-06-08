@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   html, body {
-    font-family: ${theme.fonts.main};
+    font-family: "Raleway", sans-serif;
     font-display: fallback; /* <- this can be added to each @font-face definition */
     min-height: 100vh;
 

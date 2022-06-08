@@ -1,8 +1,4 @@
 export const theme = {
-  fonts: {
-    main: "Muli, sans-serif",
-    code: "Roboto Main, monospace",
-  },
   colors: {
     colorDark: "#3c3541",
     linkDark: "#387ABD",
