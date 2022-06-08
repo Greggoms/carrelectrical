@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.min.css"
@@ -10,6 +11,12 @@ export const wrapRootElement = ({ element, props }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
+      <Helmet>
+        <link
+          rel="stylesheet"
+          href="//fonts.googleapis.com/css?family=Raleway"
+        />
+      </Helmet>
       <Layout {...props}>{element}</Layout>
       <ToastContainer newestOnTop={true} containerId="notifyToast" />
     </ThemeProvider>
@@ -22,11 +29,12 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  /* @import url(); */
   html, body {
     font-family: "Raleway", sans-serif;
-    font-display: fallback; /* <- this can be added to each @font-face definition */
-    min-height: 100vh;
 
+    min-height: 100vh;
     background: linear-gradient(to right bottom, #F25C05, 
       #F2B705,
       #049DBF 100%);
