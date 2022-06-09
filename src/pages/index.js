@@ -1,6 +1,6 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
+import { StaticImage } from "gatsby-plugin-image"
 import { IndexPageContainer } from "../css"
 
 const IndexPage = () => (

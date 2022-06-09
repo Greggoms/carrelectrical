@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Carr Electrical`,
-    description: `Need electrical work done? Contact me today to get started!`,
+    description: `We are a small company that is able to provide solutions for all your electrical installations and service needs. Fully licensed, bonded, and insured`,
     author: `@gatsbyjs & Greg Burton`,
     siteUrl: `https://carrelectrical.netlify.app`,
   },

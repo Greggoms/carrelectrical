@@ -50,6 +50,11 @@ const GlobalStyles = createGlobalStyle`
     background: ${theme.colors.colorDark};
     color: ${theme.grayscale.light1};
     overflow-y: scroll;
+    
+    @media ${theme.breakpoints.tablet} {
+      overflow: hidden;
+
+    }
   }
   
   .Toastify__toast-icon {

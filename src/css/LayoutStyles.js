@@ -7,17 +7,19 @@ export const LayoutContainer = styled.div`
   background: ${props => props.theme.grayscale.light1};
   min-height: 100vh;
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
 
   @media ${props => props.theme.breakpoints.tablet} {
     width: 95vw;
+    max-width: 1800px;
   }
 
   main {
-    padding: 0 5vw;
-  }
-
-  .main-content {
     padding: 10px;
+
+    #gatsby-focus-wrapper {
+      max-width: 1500px;
+      margin: 0 auto;
+    }
   }
 `

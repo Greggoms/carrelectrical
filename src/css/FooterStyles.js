@@ -6,6 +6,8 @@ export const FooterContainer = styled.footer`
 
   .footer-content {
     padding: 10px 20px;
+    max-width: 1500px;
+    margin: 0 auto;
     a {
       color: ${props => props.theme.colors.linkLight};
     }
