@@ -67,15 +67,15 @@ const ContactForm = () => {
             draggable: false,
           }
         )
-        init(process.env.EMAILJS_USER_ID)
+        init(`${process.env.EMAILJS_USER_ID}`)
         const templateParams = {
           name,
           email,
           message,
         }
         await emailjs.send(
-          process.env.EMAILJS_SERVICE_ID,
-          process.env.EMAILJS_TEMPLATE_ID,
+          `${process.env.EMAILJS_SERVICE_ID}`,
+          `${process.env.EMAILJS_TEMPLATE_ID}`,
           templateParams
         )
         setIsSafeToReset(true)
@@ -121,7 +121,7 @@ const ContactForm = () => {
       </label>
 
       <Recaptcha
-        sitekey={process.env.RECAPTCHA_SITE_KEY}
+        sitekey={`${process.env.RECAPTCHA_SITE_KEY}`}
         render="explicit"
         theme="dark"
         onloadCallback={callback}
