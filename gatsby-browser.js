@@ -21,6 +21,10 @@ export const wrapRootElement = ({ element, props }) => {
           async
           defer
         ></script>
+        <script
+          type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+        ></script>
       </Helmet>
       <Layout {...props}>{element}</Layout>
       <ToastContainer newestOnTop={true} />

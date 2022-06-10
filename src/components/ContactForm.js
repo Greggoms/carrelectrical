@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
 import Recaptcha from "react-recaptcha"
 import { toast } from "react-toastify"
+import emailjs, { init } from "@emailjs/browser"
 import { ContactFormContainer } from "../css"
 
 const ContactForm = () => {
@@ -25,21 +26,21 @@ const ContactForm = () => {
 
   // https://github.com/appleboy/react-recaptcha
   // specifying your onload callback function
-  var callback = function () {
+  const callback = function () {
     console.log("recaptcha is ready")
   }
   // specifying verify callback function
-  var verifyCallback = function (response) {
+  const verifyCallback = function (response) {
     setNotARobot(true)
     console.log(response)
   }
   // specifying expired callback function
-  var expiredCallback = function (response) {
+  const expiredCallback = function (response) {
     setNotARobot(false)
     console.log(response)
   }
 
-  const onSubmit = data => {
+  const onSubmit = async data => {
     try {
       if (!notARobot) {
         toast.error(e => (
@@ -49,7 +50,7 @@ const ContactForm = () => {
           </div>
         ))
       } else {
-        console.log(data)
+        const { name, email, message } = data
         toast(
           () => (
             <div className="fake-email">
@@ -58,7 +59,6 @@ const ContactForm = () => {
               <p>Email: {data.email}</p>
               <p>Message: {data.message}</p>
               <span>(tap to close)</span>
-              <span>(no email has actually been sent yet)</span>
             </div>
           ),
           {
@@ -66,6 +66,17 @@ const ContactForm = () => {
             autoClose: false,
             draggable: false,
           }
+        )
+        init(process.env.EMAILJS_USER_ID)
+        const templateParams = {
+          name,
+          email,
+          message,
+        }
+        await emailjs.send(
+          process.env.EMAILJS_SERVICE_ID,
+          process.env.EMAILJS_TEMPLATE_ID,
+          templateParams
         )
         setIsSafeToReset(true)
       }
@@ -110,7 +121,7 @@ const ContactForm = () => {
       </label>
 
       <Recaptcha
-        sitekey="6LeSdFsgAAAAAC-FL5e0t7w0nXNZs-CgcCga56if"
+        sitekey={process.env.RECAPTCHA_SITE_KEY}
         render="explicit"
         theme="dark"
         onloadCallback={callback}
