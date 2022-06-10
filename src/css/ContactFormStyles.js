@@ -35,5 +35,9 @@ export const ContactFormContainer = styled.form`
 
     font-size: large;
     cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
 `

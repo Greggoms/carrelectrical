@@ -4,19 +4,9 @@ import Recaptcha from "react-recaptcha"
 import { toast } from "react-toastify"
 import { ContactFormContainer } from "../css"
 
-// https://github.com/appleboy/react-recaptcha
-// specifying your onload callback function
-var callback = function () {
-  console.log("recaptcha is ready")
-}
-
-// specifying verify callback function
-var verifyCallback = function (response) {
-  console.log(response)
-}
-
 const ContactForm = () => {
   const [isSafeToReset, setIsSafeToReset] = useState(false)
+  const [notARobot, setNotARobot] = useState(false)
 
   const {
     register,
@@ -33,27 +23,52 @@ const ContactForm = () => {
     // eslint-disable-next-line
   }, [isSafeToReset])
 
+  // https://github.com/appleboy/react-recaptcha
+  // specifying your onload callback function
+  var callback = function () {
+    console.log("recaptcha is ready")
+  }
+  // specifying verify callback function
+  var verifyCallback = function (response) {
+    setNotARobot(true)
+    console.log(response)
+  }
+  // specifying expired callback function
+  var expiredCallback = function (response) {
+    setNotARobot(false)
+    console.log(response)
+  }
+
   const onSubmit = data => {
     try {
-      console.log(data)
-      toast(
-        () => (
-          <div className="fake-email">
-            <h1>Email preview</h1>
-            <p>From: {data.name}</p>
-            <p>Email: {data.email}</p>
-            <p>Message: {data.message}</p>
-            <span>(tap to close)</span>
-            <span>(no email has actually been sent yet)</span>
+      if (!notARobot) {
+        toast.error(e => (
+          <div>
+            <h2>You must pass the reCAPTCHA</h2>
+            <p>{e.message}</p>
           </div>
-        ),
-        {
-          position: "top-center",
-          autoClose: false,
-          draggable: false,
-        }
-      )
-      setIsSafeToReset(true)
+        ))
+      } else {
+        console.log(data)
+        toast(
+          () => (
+            <div className="fake-email">
+              <h1>Email preview</h1>
+              <p>From: {data.name}</p>
+              <p>Email: {data.email}</p>
+              <p>Message: {data.message}</p>
+              <span>(tap to close)</span>
+              <span>(no email has actually been sent yet)</span>
+            </div>
+          ),
+          {
+            position: "top-center",
+            autoClose: false,
+            draggable: false,
+          }
+        )
+        setIsSafeToReset(true)
+      }
     } catch (e) {
       console.log(e.message)
       toast.error(e.message)
@@ -100,6 +115,7 @@ const ContactForm = () => {
         theme="dark"
         onloadCallback={callback}
         verifyCallback={verifyCallback}
+        expiredCallback={expiredCallback}
       />
 
       <input
