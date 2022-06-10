@@ -1,3 +1,7 @@
+//////////////////////////
+// Not currently in use //
+//////////////////////////
+
 import React from "react"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import { StaticImage } from "gatsby-plugin-image"
@@ -45,10 +49,6 @@ const ServicesPage = () => {
       text: "Electrical safety inspections",
       image: <StaticImage src="../images/service-10.jpg" alt="" />,
     },
-    {
-      text: "All electrical maintenance and repairs",
-      image: <StaticImage src="../images/service-11.jpg" alt="" />,
-    },
   ]
   return (
     <>
@@ -57,6 +57,12 @@ const ServicesPage = () => {
         description="See what I can do for you."
       />
       <ServicesPageContainer>
+        <h1>Our Services</h1>
+        <p>
+          We provide free estimates for a full line of services for any size
+          commercial and residential jobs. Ask how we can help utilize funding
+          for energy conservation that could cover all your installation costs!
+        </p>
         <ul>
           {services.map(service => (
             <li key={service.text}>

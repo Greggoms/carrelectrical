@@ -16,6 +16,11 @@ export const wrapRootElement = ({ element, props }) => {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Raleway:200,400,700&display=swap"
         />
+        <script
+          src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+          async
+          defer
+        ></script>
       </Helmet>
       <Layout {...props}>{element}</Layout>
       <ToastContainer newestOnTop={true} />

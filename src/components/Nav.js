@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-export const Nav = () => {
+const Nav = () => {
   return (
     <nav style={{ display: "flex", gap: "20px" }}>
       <Link
@@ -11,10 +11,10 @@ export const Nav = () => {
         Get a quote
       </Link>
       <Link
-        to="/services"
+        to="/team"
         activeStyle={{ color: "#B9E1FF", textDecoration: "none" }}
       >
-        Services
+        Team
       </Link>
       <Link
         to="/about"
@@ -22,6 +22,16 @@ export const Nav = () => {
       >
         About
       </Link>
+
+      {/* Using a component instead of a page */}
+      {/* <Link
+          to="/services"
+          activeStyle={{ color: "#B9E1FF", textDecoration: "none" }}
+        >
+          Services
+        </Link> */}
     </nav>
   )
 }
+
+export default Nav

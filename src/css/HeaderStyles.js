@@ -15,7 +15,7 @@ export const HeaderContainer = styled.header`
     padding: 15px;
     max-width: 1500px;
     margin: 0 auto;
-    @media only screen and (min-width: 380px) {
+    @media ${props => props.theme.breakpoints.tablet} {
       flex-direction: row;
     }
   }
