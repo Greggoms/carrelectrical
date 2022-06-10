@@ -9,6 +9,7 @@ const ContactForm = () => {
   const [isSafeToReset, setIsSafeToReset] = useState(false)
   const [notARobot, setNotARobot] = useState(false)
 
+  // Initiate react-hook-form
   const {
     register,
     handleSubmit,
@@ -16,6 +17,7 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm()
 
+  // reset the form on submission
   useEffect(() => {
     if (isSafeToReset) {
       reset()
@@ -24,24 +26,31 @@ const ContactForm = () => {
     // eslint-disable-next-line
   }, [isSafeToReset])
 
+  // Contact Form reCAPTCHA statuses
   // https://github.com/appleboy/react-recaptcha
+
   // specifying your onload callback function
+  // Runs when the page has connected
+  // to the recaptcha services
   const callback = function () {
     console.log("recaptcha is ready")
   }
   // specifying verify callback function
+  // Runs when the recaptcha has been completed
   const verifyCallback = function (response) {
     setNotARobot(true)
-    console.log(response)
   }
   // specifying expired callback function
+  // Runs after a set time. Forces another completion
   const expiredCallback = function (response) {
     setNotARobot(false)
-    console.log(response)
   }
 
+  // What happens when we submit the form?
   const onSubmit = async data => {
     try {
+      // Dont let the form submit if the recaptcha
+      // hasn't been completed
       if (!notARobot) {
         toast.error(e => (
           <div>
@@ -51,6 +60,20 @@ const ContactForm = () => {
         ))
       } else {
         const { name, email, message } = data
+        init(`${process.env.GATSBY_EMAILJS_PUBLIC_KEY}`)
+        // These values can be used in the email template settings
+        const templateParams = {
+          name,
+          email,
+          message,
+        }
+        // Send the email
+        await emailjs.send(
+          `${process.env.GATSBY_EMAILJS_SERVICE_ID}`,
+          `${process.env.GATSBY_EMAILJS_TEMPLATE_ID}`,
+          templateParams,
+          `${process.env.GATSBY_EMAILJS_PUBLIC_KEY}`
+        )
         toast(
           () => (
             <div className="fake-email">
@@ -62,23 +85,11 @@ const ContactForm = () => {
             </div>
           ),
           {
-            position: "top-center",
             autoClose: false,
-            draggable: false,
+            position: "top-right",
           }
         )
-        init(`${process.env.GATSBY_EMAILJS_PUBLIC_KEY}`)
-        const templateParams = {
-          name,
-          email,
-          message,
-        }
-        await emailjs.send(
-          `${process.env.GATSBY_EMAILJS_SERVICE_ID}`,
-          `${process.env.GATSBY_EMAILJS_TEMPLATE_ID}`,
-          templateParams,
-          `${process.env.GATSBY_EMAILJS_PUBLIC_KEY}`
-        )
+        toast.success("Success!", { autoClose: 2000, position: "top-right" })
         setIsSafeToReset(true)
       }
     } catch (e) {
