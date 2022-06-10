@@ -67,7 +67,7 @@ const ContactForm = () => {
             draggable: false,
           }
         )
-        init(`${process.env.GATSBY_EMAILJS_USER_ID}`)
+        init(`${process.env.GATSBY_EMAILJS_PUBLIC_KEY}`)
         const templateParams = {
           name,
           email,
@@ -76,7 +76,8 @@ const ContactForm = () => {
         await emailjs.send(
           `${process.env.GATSBY_EMAILJS_SERVICE_ID}`,
           `${process.env.GATSBY_EMAILJS_TEMPLATE_ID}`,
-          templateParams
+          templateParams,
+          `${process.env.GATSBY_EMAILJS_PUBLIC_KEY}`
         )
         setIsSafeToReset(true)
       }

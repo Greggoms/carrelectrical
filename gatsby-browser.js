@@ -18,6 +18,7 @@ export const wrapRootElement = ({ element, props }) => {
         />
         <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+          nonce="{NONCE}"
           async
           defer
         ></script>
