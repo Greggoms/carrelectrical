@@ -100,6 +100,7 @@ const ContactForm = () => {
 
   return (
     <ContactFormContainer onSubmit={handleSubmit(onSubmit)}>
+      <h3>Send us an Email</h3>
       <label htmlFor="name">
         <span>*Full Name</span>
         <input

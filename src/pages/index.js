@@ -1,8 +1,9 @@
 import React from "react"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 
-import Hero from "../components/Hero"
 import Services from "../components/Services"
+import Reviews from "../components/Reviews"
+import Button from "../components/Button"
 import { IndexPageContainer } from "../css"
 
 const IndexPage = () => {
@@ -13,15 +14,16 @@ const IndexPage = () => {
         description="Solve your electrical problems now!"
       />
       <IndexPageContainer>
-        <Hero />
         <Services />
-
-        <h2>Testimonials</h2>
-        <p>
-          Why choose Carr Electrical Systems? See what several of our satisfied
-          clients that had the same question have to say!
-        </p>
-        <h2>...Map and contact info here...</h2>
+        <Reviews />
+        {/* 
+        to avoid making the parent display: flex;
+        and prevents a component creation
+        */}
+        <div className="lower-cta">
+          <h2>Don't wait for too late!</h2>
+          <Button link="/contact" text="Request Free Quote" />
+        </div>
       </IndexPageContainer>
     </>
   )

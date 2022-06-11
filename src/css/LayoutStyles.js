@@ -21,5 +21,8 @@ export const LayoutContainer = styled.div`
       max-width: 1500px;
       margin: 0 auto;
     }
+
+    /* Introduced for the reviews scroll snapping */
+    overflow: hidden;
   }
 `

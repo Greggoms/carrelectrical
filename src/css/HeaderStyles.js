@@ -13,7 +13,7 @@ export const HeaderContainer = styled.header`
     justify-items: center;
 
     padding: 15px;
-    max-width: 1500px;
+    max-width: 1000px;
     margin: 0 auto;
     @media ${props => props.theme.breakpoints.tablet} {
       flex-direction: row;

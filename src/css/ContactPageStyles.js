@@ -1,5 +1,16 @@
 import styled from "styled-components"
 
+export const ContactPageContainer = styled.article`
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+    max-width: 250px;
+    margin: 50px auto;
+  }
+`
 export const ContactFormContainer = styled.form`
   display: flex;
   flex-direction: column;

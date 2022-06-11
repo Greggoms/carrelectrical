@@ -1,9 +1,13 @@
 import styled from "styled-components"
 
 export const ServicesContainer = styled.section`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 
   h2 {
     margin-bottom: 10px;
@@ -27,7 +31,7 @@ export const ServicesContainer = styled.section`
     grid-template-rows: 1fr;
 
     justify-items: center;
-    align-items: center;
+    align-items: flex-start;
 
     .gatsby-image-wrapper,
     .info,
@@ -42,6 +46,7 @@ export const ServicesContainer = styled.section`
     .info {
       z-index: 2;
       color: ${props => props.theme.grayscale.light1};
+      padding: 15px;
     }
 
     .overlay {
@@ -49,6 +54,29 @@ export const ServicesContainer = styled.section`
       width: 100%;
       height: 100%;
       background: rgba(60, 60, 60, 0.7);
+    }
+
+    &.entergy {
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        .gatsby-image-wrapper {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        span {
+          margin: -40px 0 -50px 0;
+        }
+
+        p {
+          max-width: 500px;
+          line-height: 18pt;
+        }
+      }
     }
   }
 `

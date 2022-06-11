@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <HeroContainer>
       <StaticImage src="../images/hero-trimmed.jpg" alt="Carr Electrical" />
-      <h1>Wave your electrical problems goodbye</h1>
+      {/* <h1>Wave your electrical problems goodbye</h1> */}
       <Button link="/contact" text="Get Quote!" />
     </HeroContainer>
   )

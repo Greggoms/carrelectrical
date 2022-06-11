@@ -10,19 +10,9 @@ export const HeroContainer = styled.section`
 
   .gatsby-image-wrapper {
     grid-column: 1 / -1;
-    grid-row: 2 / span 3;
-    border: 3px solid ${props => props.theme.grayscale.dark4};
-  }
+    grid-row: 1 / span 4;
 
-  h1 {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-
-    z-index: 1;
-    background: ${props => props.theme.grayscale.dark4};
-    color: ${props => props.theme.grayscale.light1};
-    padding: 10px;
-    text-align: center;
+    max-height: 500px;
   }
 
   button {
@@ -35,13 +25,21 @@ export const HeroContainer = styled.section`
     font-size: 16pt;
     background: ${props => props.theme.colors.linkDark};
     color: ${props => props.theme.grayscale.light1};
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 1px 1px 5px ${props => props.theme.grayscale.dark3};
 
     &:hover {
       transform: scale(1.05);
       box-shadow: 3px 3px 10px ${props => props.theme.grayscale.dark1};
     }
   }
+
+  /* h1 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+
+    z-index: 1;
+    background: ${props => props.theme.grayscale.dark4};
+    color: ${props => props.theme.grayscale.light1};
+    padding: 10px;
+    text-align: center;
+  } */
 `

@@ -7,6 +7,7 @@ const Nav = () => {
       <Link
         to="/contact"
         activeStyle={{ color: "#B9E1FF", textDecoration: "none" }}
+        style={{ display: "none" }}
       >
         Get a quote
       </Link>

@@ -3,6 +3,7 @@ export const theme = {
     colorDark: "#3c3541",
     linkDark: "#387ABD",
     linkLight: "#B9E1FF",
+    red: "#A72035",
   },
   grayscale: {
     light1: "#F2F2F2",
