@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
-import Nav from "./Nav"
 import { HeaderContainer } from "../css"
 
 const Header = () => (
@@ -16,7 +14,6 @@ const Header = () => (
           alt="Carr Electrical Logo"
         />
       </Link>
-      <Nav />
     </div>
   </HeaderContainer>
 )

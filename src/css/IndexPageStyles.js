@@ -6,6 +6,7 @@ export const IndexPageContainer = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin-bottom: 50px;
 
     button {
       background: ${props => props.theme.colors.linkDark};

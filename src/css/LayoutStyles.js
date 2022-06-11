@@ -2,7 +2,12 @@ import styled from "styled-components"
 
 export const LayoutContainer = styled.div`
   display: grid;
-  grid-template-rows: min-content 1fr min-content;
+
+  /* 
+  This will change as components are added or removed
+  from ../components/Layout.js
+  */
+  grid-template-rows: min-content min-content 1fr min-content;
 
   background: ${props => props.theme.grayscale.light1};
   min-height: 100vh;

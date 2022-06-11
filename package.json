@@ -6,6 +6,12 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@react-spring/web": "^9.4.5",
     "babel-plugin-styled-components": "^2.0.7",
     "gatsby": "^4.15.2",
     "gatsby-plugin-gatsby-cloud": "^4.15.0",

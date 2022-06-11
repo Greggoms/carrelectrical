@@ -25,6 +25,31 @@ export const ServicesContainer = styled.section`
     }
   }
 
+  .entergy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    background: ${props => props.theme.grayscale.dark4};
+    color: ${props => props.theme.grayscale.light1};
+    padding: 20px;
+
+    .gatsby-image-wrapper {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    span {
+      margin: -20px 0 -30px 0;
+    }
+
+    p {
+      max-width: 500px;
+      line-height: 18pt;
+    }
+  }
+
   .service {
     display: grid;
     grid-template-columns: 1fr;
@@ -54,29 +79,6 @@ export const ServicesContainer = styled.section`
       width: 100%;
       height: 100%;
       background: rgba(60, 60, 60, 0.7);
-    }
-
-    &.entergy {
-      .info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-
-        .gatsby-image-wrapper {
-          width: 100%;
-          max-width: 300px;
-        }
-
-        span {
-          margin: -40px 0 -50px 0;
-        }
-
-        p {
-          max-width: 500px;
-          line-height: 18pt;
-        }
-      }
     }
   }
 `
