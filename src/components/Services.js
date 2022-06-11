@@ -52,11 +52,7 @@ const Services = () => {
       <div className="entergy">
         <h2>Energy Conservation</h2>
         <span>With</span>
-        <StaticImage
-          className="sponsor-logo"
-          src="../images/entergy.png"
-          alt="Partnered with Entergy"
-        />
+        <StaticImage src="../images/entergy.png" alt="Partnered with Entergy" />
         <p>
           We have partnered with Entergy Arkansas to offer energy saving
           lighting options to our customers. This is a rebate program that can

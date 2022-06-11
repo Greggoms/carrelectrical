@@ -11,6 +11,7 @@ module.exports = {
     siteUrl: `https://carrelectrical.netlify.app`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-next-seo`,
     `gatsby-plugin-react-helmet`,
