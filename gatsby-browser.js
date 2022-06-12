@@ -40,11 +40,15 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  /* @import url(); */
   html, body {
     font-family: "Raleway", sans-serif;
 
-    min-height: 100vh;
+    /*
+    Not sure if this min-height is needed.
+    I'm pretty sure it's messing with jumpy navigation
+    on mobile...  
+    */
+    /* min-height: 100vh; */
     background: ${props => props.theme.grayscale.dark3}
   }
 

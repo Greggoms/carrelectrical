@@ -4,8 +4,9 @@ export const NavContainer = styled.nav`
   position: sticky;
   top: 0px;
   z-index: 100;
-
-  background: ${props => props.theme.grayscale.dark4};
+  background: rgba(53, 53, 53, 0.9);
+  /* not currently supported in firefox */
+  backdrop-filter: blur(10px);
 
   .nav-content {
     display: flex;
@@ -14,6 +15,7 @@ export const NavContainer = styled.nav`
     justify-content: center;
 
     padding: 15px;
+    height: 75px;
     max-width: 1000px;
     margin: 0 auto;
   }

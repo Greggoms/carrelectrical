@@ -20,7 +20,10 @@ const ReviewsContainer = styled.section`
     grid-template-rows: min-content;
     gap: 20px;
 
-    /* https://codepen.io/chriscoyier/pen/pMRgwW */
+    /* 
+    snap-scrolling
+    https://codepen.io/chriscoyier/pen/pMRgwW
+    */
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
@@ -28,29 +31,18 @@ const ReviewsContainer = styled.section`
     list-style-type: none;
     background: ${props => props.theme.grayscale.dark4};
     border: 10px solid ${props => props.theme.grayscale.dark4};
-    padding: 10px 20px;
+    padding: 0 20px;
 
     @media ${props => props.theme.breakpoints.tablet} {
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     }
   }
 
-  /* more scroll snap stuff */
-  li:not(:first-child),
-  li:not(:last-child) {
-    scroll-snap-align: center;
-  }
-
-  li:first-child {
-    scroll-snap-align: start;
-  }
-  li:last-child {
-    scroll-snap-align: end;
-  }
-
   li {
-    /* Keep all grid children on the same row
-    to imitate a flex-direction: row; layout */
+    /* 
+    Keep all grid children on the same row
+    to imitate a flex-direction: row; layout 
+    */
     grid-row: 1;
 
     overflow-y: hidden;
@@ -64,6 +56,19 @@ const ReviewsContainer = styled.section`
     background: ${props => props.theme.grayscale.light2};
     padding: 10px;
     line-height: 16pt;
+  }
+
+  /* more scroll snap stuff */
+  li:not(:first-child),
+  li:not(:last-child) {
+    scroll-snap-align: center;
+  }
+
+  li:first-child {
+    scroll-snap-align: start;
+  }
+  li:last-child {
+    scroll-snap-align: end;
   }
 `
 

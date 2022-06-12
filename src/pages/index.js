@@ -16,6 +16,8 @@ const IndexPage = () => {
       />
       <IndexPageContainer>
         <Services />
+
+        {/* prevent a component creation */}
         <div className="entergy">
           <h2>Energy Conservation</h2>
           <span>With</span>
@@ -29,13 +31,12 @@ const IndexPage = () => {
             pay up to 100% of the installation costs for the customer.
           </p>
         </div>
+
         <Reviews />
-        {/* 
-        to avoid making the parent display: flex;
-        and prevents a component creation
-        */}
+
+        {/* prevent a component creation */}
         <div className="lower-cta">
-          <h2>Don't wait for too late!</h2>
+          <h2>Don't wait for too late</h2>
           <Button link="/contact" text="Contact us today!" />
         </div>
       </IndexPageContainer>
