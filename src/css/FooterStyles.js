@@ -20,6 +20,7 @@ export const FooterContainer = styled.footer`
     svg {
       height: 100%;
       max-height: 35px;
+      padding-right: 20px;
     }
     a {
       color: ${props => props.theme.colors.linkLight};

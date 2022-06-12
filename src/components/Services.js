@@ -48,17 +48,6 @@ const Services = () => {
         </div>
         <div className="overlay"></div>
       </div>
-
-      <div className="entergy">
-        <h2>Energy Conservation</h2>
-        <span>With</span>
-        <StaticImage src="../images/entergy.png" alt="Partnered with Entergy" />
-        <p>
-          We have partnered with Entergy Arkansas to offer energy saving
-          lighting options to our customers. This is a rebate program that can
-          pay up to 100% of the installation costs for the customer.
-        </p>
-      </div>
     </ServicesContainer>
   )
 }

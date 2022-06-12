@@ -27,19 +27,32 @@ const ReviewsContainer = styled.section`
 
     list-style-type: none;
     background: ${props => props.theme.grayscale.dark4};
-    padding: 10px;
+    border: 10px solid ${props => props.theme.grayscale.dark4};
+    padding: 10px 20px;
 
     @media ${props => props.theme.breakpoints.tablet} {
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     }
   }
 
+  /* more scroll snap stuff */
+  li:not(:first-child),
+  li:not(:last-child) {
+    scroll-snap-align: center;
+  }
+
+  li:first-child {
+    scroll-snap-align: start;
+  }
+  li:last-child {
+    scroll-snap-align: end;
+  }
+
   li {
     /* Keep all grid children on the same row
     to imitate a flex-direction: row; layout */
     grid-row: 1;
-    /* more scroll snap stuff */
-    scroll-snap-align: center;
+
     overflow-y: hidden;
     min-width: 300px;
     height: min-content;

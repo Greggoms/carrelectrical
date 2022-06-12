@@ -50,13 +50,13 @@ const Nav = () => {
           to="/contact"
           activeStyle={{ color: "#B9E1FF", textDecoration: "none" }}
         >
-          Get a quote
+          Contact
         </Link>
         <Link
           to="/team"
           activeStyle={{ color: "#B9E1FF", textDecoration: "none" }}
         >
-          Team
+          Our Team
         </Link>
         <Link
           to="/about"

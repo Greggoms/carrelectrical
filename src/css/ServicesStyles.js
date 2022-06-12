@@ -3,7 +3,6 @@ import styled from "styled-components"
 export const ServicesContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
 
   width: 100%;
   max-width: 1500px;
@@ -25,38 +24,13 @@ export const ServicesContainer = styled.section`
     }
   }
 
-  .entergy {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
-    background: ${props => props.theme.grayscale.dark4};
-    color: ${props => props.theme.grayscale.light1};
-    padding: 20px;
-
-    .gatsby-image-wrapper {
-      width: 100%;
-      max-width: 300px;
-    }
-
-    span {
-      margin: -20px 0 -30px 0;
-    }
-
-    p {
-      max-width: 500px;
-      line-height: 18pt;
-    }
-  }
-
   .service {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 
     justify-items: center;
-    align-items: flex-start;
+    align-items: center;
 
     .gatsby-image-wrapper,
     .info,

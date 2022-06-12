@@ -1,3 +1,4 @@
+export * from "./AboutPageStyles"
 export * from "./ContactPageStyles"
 export * from "./FooterStyles"
 export * from "./HeaderStyles"

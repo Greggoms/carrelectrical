@@ -14,7 +14,7 @@ const Footer = () => {
             Built with
             {` `}
             <a href="https://www.gatsbyjs.com">Gatsby</a> by{" "}
-            <a href="https://github.com/Greggoms">Greg Burton</a>
+            <a href="https://github.com/Greggoms/carrelectrical">Greg Burton</a>
           </span>
         </div>
         <a href="https://www.facebook.com/CA.EL.SY/">

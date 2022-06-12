@@ -3,18 +3,17 @@ import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 import team from "../data/team"
 import { TeamPageContainer } from "../css"
+import { StaticImage } from "gatsby-plugin-image"
 
 const TeamPage = () => {
   return (
     <>
       <GatsbySeo title="Team | Carr Electrical" description="Meet the team." />
       <TeamPageContainer>
-        <h1>Our Team</h1>
-        <p>
-          We are a small company that is able to provide solutions for all your
-          electrical installations and service needs (commercial & residential).
-          Fully licensed, bonded, and insured.
-        </p>
+        <div className="team-hero">
+          <h1>Our Team</h1>
+          <StaticImage src="../images/team.jpg" alt="The Electrical family" />
+        </div>
         <ul>
           {team.map(member => (
             <li key={member.name}>

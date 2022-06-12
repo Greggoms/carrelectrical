@@ -1,5 +1,6 @@
 import React from "react"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
+
 import ContactForm from "../components/ContactForm"
 import { ContactPageContainer } from "../css"
 
@@ -16,9 +17,12 @@ const ContactPage = () => {
           PO Box 982 <br />
           Bryant, AR 72089
         </p>
-        <a href="mailto:devmellon@gmail.com?subject = Regarding your website">
-          robc@ces-ar.us
-        </a>
+        <div>
+          <span>(for testing)</span>{" "}
+          <a href="mailto:gpburton@ualr.edu?subject = Regarding your website">
+            gpburton@ualr.edu
+          </a>
+        </div>
         <a href="tel: 5016725051">(501) 672-5051</a>
       </div>
 

@@ -104,6 +104,7 @@ const ContactForm = () => {
       <label htmlFor="name">
         <span>*Full Name</span>
         <input
+          id="name"
           name="name"
           placeholder="Bruce Wayne"
           type="text"
@@ -114,6 +115,7 @@ const ContactForm = () => {
       <label htmlFor="email">
         <span>*Email</span>
         <input
+          id="email"
           name="email"
           placeholder="your@email.com"
           type="email"
@@ -124,6 +126,7 @@ const ContactForm = () => {
       <label htmlFor="message">
         <span>*Message</span>
         <textarea
+          id="message"
           name="message"
           placeholder="Tell me about the project you would like completed."
           {...register("message", { required: true })}
@@ -142,11 +145,7 @@ const ContactForm = () => {
         expiredCallback={expiredCallback}
       />
 
-      <input
-        type="submit"
-        value="Request Quote"
-        className="request-quote-btn"
-      />
+      <input type="submit" value="Send Message" className="request-quote-btn" />
     </ContactFormContainer>
   )
 }
