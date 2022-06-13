@@ -37,7 +37,7 @@ const IndexPage = () => {
         {/* prevent a component creation */}
         <div className="lower-cta">
           <h2>Don't wait for too late</h2>
-          <Button link="/contact" text="Contact us today!" />
+          <Button link="/contact/" text="Contact us today!" />
         </div>
       </IndexPageContainer>
     </>

@@ -53,6 +53,7 @@ export const TeamPageContainer = styled.section`
 
     p {
       max-width: 500px;
+      line-height: 18pt;
     }
 
     @media ${props => props.theme.breakpoints.tablet} {

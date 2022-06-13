@@ -17,12 +17,7 @@ const ContactPage = () => {
           PO Box 982 <br />
           Bryant, AR 72089
         </p>
-        <div>
-          <span>(for testing)</span>{" "}
-          <a href="mailto:gpburton@ualr.edu?subject = Regarding your website">
-            gpburton@ualr.edu
-          </a>
-        </div>
+        <a href="mailto:robc@ces-ar.us">robc@ces-ar.us</a>
         <a href="tel: 5016725051">(501) 672-5051</a>
       </div>
 

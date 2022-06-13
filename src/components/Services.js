@@ -32,7 +32,6 @@ const Services = () => {
         </div>
         <div className="overlay"></div>
       </div>
-
       <div className="service residential">
         <StaticImage
           src="../images/residential.jpg"

@@ -25,6 +25,7 @@ export const IndexPageContainer = styled.div`
     p {
       max-width: 500px;
       line-height: 18pt;
+      text-align: center;
     }
   }
 

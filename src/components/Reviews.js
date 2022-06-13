@@ -19,9 +19,8 @@ const Reviews = () => {
               <li key={review.message}>
                 <p>"{review.message}"</p>
                 <p>
-                  {" - "}
-                  {review.author.name} <br />
-                  {review.author.authority}
+                  - {review.author.name} <br />
+                  <em>{review.author.authority}</em>
                 </p>
               </li>
             )
