@@ -10,7 +10,7 @@ export const NavContainer = styled.nav`
 
   .nav-content {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
     justify-content: center;
 

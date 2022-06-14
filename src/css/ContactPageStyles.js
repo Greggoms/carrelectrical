@@ -5,13 +5,7 @@ export const ContactPageContainer = styled.article`
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-    width: 100%;
-    max-width: 250px;
-    margin: 50px auto;
-
-    svg {
-    }
+    margin: 30px 0;
   }
 `
 export const ContactFormContainer = styled.form`
@@ -21,7 +15,7 @@ export const ContactFormContainer = styled.form`
 
   width: 100%;
   max-width: 800px;
-  margin: 0 auto 50px;
+  /* margin: 0 auto 50px; */
 
   label {
     display: flex;

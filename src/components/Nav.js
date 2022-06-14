@@ -47,19 +47,19 @@ const Nav = () => {
           }
         </Transition>
         <Link
-          to="/contact/"
+          to="/contact"
           activeStyle={{ color: "#B9E1FF", textDecoration: "none" }}
         >
           Contact
         </Link>
         <Link
-          to="/team/"
+          to="/team"
           activeStyle={{ color: "#B9E1FF", textDecoration: "none" }}
         >
           Our Team
         </Link>
         <Link
-          to="/about/"
+          to="/about"
           activeStyle={{ color: "#B9E1FF", textDecoration: "none" }}
         >
           About

@@ -1,8 +1,16 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 import { AboutPageContainer } from "../css"
 
 const AboutPage = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    }
+  }, [])
   return (
     <>
       <GatsbySeo

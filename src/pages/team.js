@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { GatsbySeo } from "gatsby-plugin-next-seo"
 
 import team from "../data/team"
@@ -6,6 +6,14 @@ import { TeamPageContainer } from "../css"
 import { StaticImage } from "gatsby-plugin-image"
 
 const TeamPage = () => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    }
+  }, [])
   return (
     <>
       <GatsbySeo title="Team | Carr Electrical" description="Meet the team." />

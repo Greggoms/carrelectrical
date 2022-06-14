@@ -16,6 +16,10 @@ export const wrapRootElement = ({ element, props }) => {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Raleway:200,400,700&display=swap"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+        />
         <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           nonce="{NONCE}"
@@ -49,12 +53,12 @@ const GlobalStyles = createGlobalStyle`
     on mobile...  
     */
     /* min-height: 100vh; */
-    background: ${props => props.theme.grayscale.dark3}
+    background: ${props => props.theme.grayscale.dark4}
   }
 
-   #gatsby-focus-wrapper {
+   /* #gatsby-focus-wrapper {
     height: 100%;
-  }
+  } */
 
 .Toastify__toast-container {
   width: 100% !important;

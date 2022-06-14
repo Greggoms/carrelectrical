@@ -1,6 +1,19 @@
 import styled from "styled-components"
 
 export const IndexPageContainer = styled.div`
+  #index-cta {
+    background: ${props => props.theme.grayscale.dark3};
+    color: white;
+    padding: 30px;
+    h2 {
+      margin-bottom: 3px;
+    }
+
+    &__content {
+      margin: 0 auto;
+      max-width: 500px;
+    }
+  }
   .entergy {
     grid-column: 1/-1;
 

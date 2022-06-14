@@ -102,15 +102,20 @@ const ContactForm = () => {
     <ContactFormContainer onSubmit={handleSubmit(onSubmit)}>
       <h3>Send us an Email</h3>
       <label htmlFor="name">
-        <span>*Full Name</span>
+        <span>*First and Last Name</span>
         <input
           id="name"
           name="name"
           placeholder="Bruce Wayne"
           type="text"
-          {...register("name", { required: true })}
+          {...register("name", { required: true, minLength: 3 })}
         />
-        {errors.name && <span>Please provide your name.</span>}
+        {errors.name?.type === "required" && (
+          <span>Please provide your name.</span>
+        )}
+        {errors.name?.type === "minLength" && (
+          <span>Minimum length is 3 characters</span>
+        )}
       </label>
       <label htmlFor="email">
         <span>*Email</span>

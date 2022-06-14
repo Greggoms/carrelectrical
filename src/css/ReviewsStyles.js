@@ -45,17 +45,24 @@ const ReviewsContainer = styled.section`
     */
     grid-row: 1;
 
+    font-family: "Montserrat", sans-serif;
     overflow-y: hidden;
     min-width: 300px;
     height: min-content;
 
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
 
     background: ${props => props.theme.grayscale.light2};
     padding: 10px;
     line-height: 16pt;
+
+    hr {
+      width: 30%;
+      border: none;
+      border-bottom: 3px solid ${props => props.theme.colors.red};
+    }
   }
 
   /* more scroll snap stuff */

@@ -6,8 +6,6 @@ export const HeroContainer = styled.section`
   /* grid-template-rows: 1fr 40px min-content; */
   grid-template-rows: 40px min-content 1fr 40px 40px;
 
-  margin-bottom: 30px;
-
   .gatsby-image-wrapper {
     grid-column: 1 / -1;
     grid-row: 1 / span 4;

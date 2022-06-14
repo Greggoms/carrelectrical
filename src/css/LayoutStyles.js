@@ -19,13 +19,21 @@ export const LayoutContainer = styled.div`
     max-width: 1800px;
   }
 
-  main {
+  .content-padding {
     padding: 10px;
+  }
 
-    #gatsby-focus-wrapper {
+  main {
+    /*
+    Moved to .content-padding because i want more
+    edge to edge content control.
+    */
+    /* padding: 10px; */
+
+    /* #gatsby-focus-wrapper {
       max-width: 1500px;
       margin: 0 auto;
-    }
+    } */
 
     /* Introduced for the reviews scroll snapping */
     overflow: hidden;
