@@ -43,8 +43,8 @@ const IndexPage = () => {
           <Reviews />
         </div>
 
-        <div id="index-cta">
-          <div id="index-cta__content">
+        <div className="form-container">
+          <div className="form-content">
             <h2>Don't wait for too late</h2>
             <ContactForm />
           </div>

@@ -1,15 +1,14 @@
 import styled from "styled-components"
 
 export const IndexPageContainer = styled.div`
-  #index-cta {
+  .form-container {
     background: ${props => props.theme.grayscale.dark3};
     color: white;
     padding: 30px;
     h2 {
       margin-bottom: 3px;
     }
-
-    &__content {
+    .form-content {
       margin: 0 auto;
       max-width: 500px;
     }

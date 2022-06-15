@@ -100,7 +100,6 @@ const ContactForm = () => {
 
   return (
     <ContactFormContainer onSubmit={handleSubmit(onSubmit)}>
-      <h3>Send us an Email</h3>
       <label htmlFor="name">
         <span>*First and Last Name</span>
         <input
@@ -111,10 +110,10 @@ const ContactForm = () => {
           {...register("name", { required: true, minLength: 3 })}
         />
         {errors.name?.type === "required" && (
-          <span>Please provide your name.</span>
+          <span className="form-error">Please provide your name.</span>
         )}
         {errors.name?.type === "minLength" && (
-          <span>Minimum length is 3 characters</span>
+          <span className="form-error">Minimum length is 3 characters</span>
         )}
       </label>
       <label htmlFor="email">
@@ -126,7 +125,9 @@ const ContactForm = () => {
           type="email"
           {...register("email", { required: true })}
         />
-        {errors.email && <span>Your email is required.</span>}
+        {errors.email && (
+          <span className="form-error">Your email is required.</span>
+        )}
       </label>
       <label htmlFor="message">
         <span>*Message</span>
@@ -137,7 +138,9 @@ const ContactForm = () => {
           {...register("message", { required: true })}
         />
         {errors.message && (
-          <span>Please tell me about the service you require.</span>
+          <span className="form-error">
+            Please tell me about the service you require.
+          </span>
         )}
       </label>
 

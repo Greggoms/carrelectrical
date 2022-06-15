@@ -24,16 +24,22 @@ const TeamPage = () => {
         </div>
         <ul>
           {team.map(member => (
-            <li key={member.name}>
-              <div className="member-image">
-                {member.image}
-                <h2>{member.name}</h2>
-                <p>
-                  <em>{member.position}</em>
-                </p>
-              </div>
-              <p>{member.bio}</p>
-            </li>
+            <div key={member.name} className="member-card">
+              <div className="under-path" />
+              <div className="path" />
+              <li>
+                <div className="member-image">
+                  {member.image}
+                  <div className="member-image__text">
+                    <h2>{member.name}</h2>
+                    <p>
+                      <em>{member.position}</em>
+                    </p>
+                  </div>
+                </div>
+                <p className="bio">{member.bio}</p>
+              </li>
+            </div>
           ))}
         </ul>
       </TeamPageContainer>
