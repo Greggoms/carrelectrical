@@ -1,35 +1,6 @@
 import styled from "styled-components"
-import teamImg from "../images/team.jpg"
 
 export const TeamPageContainer = styled.section`
-  .member-card {
-    display: grid;
-
-    .path {
-      grid-column: 1;
-      grid-row: 1;
-      width: 100%;
-      height: 100%;
-      background: ${props => props.theme.grayscale.dark4};
-
-      clip-path: polygon(20% 0%, 100% 80%, 100% 100%, 0% 100%, 0% 0%);
-    }
-    li {
-      z-index: 1;
-      grid-column: 1;
-      grid-row: 1;
-    }
-  }
-
-  .under-path {
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-    height: 100%;
-    /* background-image: url(${teamImg}); */
-    background-size: cover;
-  }
-
   .team-hero {
     display: grid;
     grid-template-columns: 1fr;
@@ -62,6 +33,10 @@ export const TeamPageContainer = styled.section`
     }
   }
 
+  .member-card {
+    display: grid;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -78,35 +53,74 @@ export const TeamPageContainer = styled.section`
   }
 
   li {
-    display: flex;
-    flex-direction: column;
+    z-index: 1;
+    grid-column: 1;
+    grid-row: 1;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content;
     align-items: center;
     gap: 20px;
-    padding: 20px 10px;
-
-    p {
-      max-width: 500px;
-      line-height: 18pt;
-    }
-
-    .bio {
-      background: ${props => props.theme.grayscale.light1};
-      padding: 10px;
-    }
 
     @media ${props => props.theme.breakpoints.tablet} {
-      flex-direction: row;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
+  p {
+    max-width: 500px;
+    line-height: 18pt;
+  }
+
   .member-image {
-    align-self: center;
-    text-align: center;
+    z-index: 1;
+    grid-column: 1;
+    grid-row: 1;
+
+    justify-self: center;
+    color: ${props => props.theme.grayscale.light1};
 
     &__text {
-      background: ${props => props.theme.grayscale.dark3};
-      color: ${props => props.theme.grayscale.light1};
-      padding: 5px;
+      padding: 5px 0;
     }
+  }
+
+  .bio {
+    z-index: 1;
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+
+    background: ${props => props.theme.grayscale.light1};
+    /* background: rgba(255, 255, 255, 0.8); */
+    padding: 10px;
+
+    @media ${props => props.theme.breakpoints.tablet} {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  .path,
+  .under-path {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+
+    /* @media ${props => props.theme.breakpoints.tablet} {
+      grid-column: 1 / -1;
+    } */
+  }
+
+  .path {
+    background: ${props => props.theme.grayscale.dark4};
+    clip-path: polygon(20% 0%, 100% 80%, 100% 100%, 0% 100%, 0% 0%);
+  }
+
+  .under-path {
+    background: ${props => props.theme.colors.red};
+    clip-path: polygon(30% 0%, 100% 70%, 100% 100%, 0% 100%, 0% 0%);
   }
 `

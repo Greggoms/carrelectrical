@@ -25,9 +25,9 @@ const TeamPage = () => {
         <ul>
           {team.map(member => (
             <div key={member.name} className="member-card">
-              <div className="under-path" />
-              <div className="path" />
               <li>
+                <div className="under-path" />
+                <div className="path" />
                 <div className="member-image">
                   {member.image}
                   <div className="member-image__text">

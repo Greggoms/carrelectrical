@@ -11,6 +11,10 @@ export const IndexPageContainer = styled.div`
     .form-content {
       margin: 0 auto;
       max-width: 500px;
+
+      p {
+        margin-bottom: 20px;
+      }
     }
   }
   .entergy {
@@ -24,6 +28,7 @@ export const IndexPageContainer = styled.div`
     background: ${props => props.theme.grayscale.dark4};
     color: ${props => props.theme.grayscale.light1};
     padding: 20px;
+    padding-bottom: 50px;
 
     .gatsby-image-wrapper {
       width: 100%;

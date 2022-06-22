@@ -21,6 +21,8 @@ const Services = () => {
   return (
     <ServicesContainer>
       <div className="service commercial">
+        <div className="under-path" />
+        <div className="path" />
         <StaticImage src="../images/commercial.jpg" alt="Commercial Services" />
         <div className="info">
           <h2>Commercial Services</h2>
@@ -30,9 +32,10 @@ const Services = () => {
             ))}
           </ul>
         </div>
-        <div className="overlay"></div>
       </div>
       <div className="service residential">
+        <div className="under-path-reverse" />
+        <div className="path-reverse" />
         <StaticImage
           src="../images/residential.jpg"
           alt="Residential Services"
@@ -45,7 +48,6 @@ const Services = () => {
             ))}
           </ul>
         </div>
-        <div className="overlay"></div>
       </div>
     </ServicesContainer>
   )

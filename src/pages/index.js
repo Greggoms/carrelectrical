@@ -46,6 +46,7 @@ const IndexPage = () => {
         <div className="form-container">
           <div className="form-content">
             <h2>Don't wait for too late</h2>
+            <p>Contact us today!</p>
             <ContactForm />
           </div>
         </div>

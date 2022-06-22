@@ -18,7 +18,7 @@ const AboutPage = () => {
         description="Learn more about my services."
       />
       <AboutPageContainer>
-        <div>
+        <div className="who">
           <h1>Who We Are</h1>
           <p>
             We are a small company that is able to provide solutions for all
